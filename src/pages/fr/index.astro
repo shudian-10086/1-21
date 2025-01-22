@@ -3,11 +3,25 @@ import "../../styles/style.css";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bad Parenting Game</title>
+    <title>FiddleBops - Jeu de création musicale en ligne gratuit</title>
+    <meta name="description" content="Découvrez le plaisir de créer de la musique avec FiddleBops, un jeu en ligne gratuit où vous pouvez composer des rythmes musicaux uniques. Explorez, combinez et expérimentez avec différents sons.">
+    <meta name="keywords" content="FiddleBops, jeu de musique en ligne, jeu gratuit, création musicale, jeu de rythme, jeu de musique pour enfants">
+    <meta name="author" content="L'équipe FiddleBops">
+    <meta property="og:title" content="FiddleBops - Jeu de création musicale en ligne gratuit">
+    <meta property="og:description" content="Découvrez le plaisir de créer de la musique avec FiddleBops, un jeu en ligne gratuit où vous pouvez composer des rythmes musicaux uniques. Explorez, combinez et expérimentez avec différents sons.">
+    <meta property="og:image" content="URL_to_your_game_image">
+    <meta property="og:url" content="URL_to_your_website">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+     <link rel="canonical" href="URL_to_your_website" />
+     <link rel="preload" href="https://silkycell.github.io/FiddleBops/" as="document">
+     <link rel="dns-prefetch" href="https://silkycell.github.io">
+     <link rel="preconnect" href="https://silkycell.github.io" crossorigin>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
@@ -19,8 +33,8 @@ import "../../styles/style.css";
 });
   </script>
   <script>
-	function goToLink(event: Event) {
-	  const select = event.target as HTMLSelectElement;
+	function goToLink(event) {
+	  const select = event.target;
 	  const selectedOption = select.options[select.selectedIndex];
 	  const url = selectedOption.getAttribute('data-url');
 	  if (url) {
@@ -59,19 +73,19 @@ import "../../styles/style.css";
 <body>
     <header>
         <nav>
-            <div class="logo">Bad Parenting</div>
+            <div class="logo">FiddleBops</div>
             <button class="nav-toggle">
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sprunki</a></li>
-                <li><a href="#">New Games</a></li>
+                <li><a href="/fr">Accueil</a></li>
+                <li><a href="/fr#play">Jeu FiddleBops</a></li>
+                <li><a href="/fr#descrip">Comment jouer à FiddleBops</a></li>
             </ul>
 			<select style="float:right;">
-				<option value="">Language</option>
+				<option value="">Langue</option>
 				<option data-url="/">English</option>
 				<option data-url="/zh">简体中文</option>  
 				<option data-url="/es">Español</option>
@@ -84,184 +98,150 @@ import "../../styles/style.css";
     </header>
    <main>
         <section class="hero">
-            <h1>Free Bad Parenting Game</h1>
-            <p>Experience the Chilling Horror of Bad Parenting in This Haunting Adventure...</p>
-            <button>Start Bad Parenting</button>
+            <h1>Jeu FiddleBops gratuit en ligne</h1>
+            <p>Embarquez pour un voyage musical incroyable, libérez votre talent et créez des rythmes musicaux uniques...</p>
+            <button><a href="#play">Commencer le jeu</a></button>
         </section>
-        <section class="more-games">
-             <h2>Discover More Bad Parenting Game Adventures</h2>
+        <section class="more-games" id="play">
+             <h2>FiddleBops : Un jeu de création musicale captivant</h2>
              <div class="game-grid">
                  <!-- Game cards go here -->
                  <div class="game-card">
-                    <img src="game-card.png" alt="game image">
-                   <h3> Game Name</h3>
+                  <iframe 
+                  src="https://silkycell.github.io/FiddleBops/" 
+                  width="100%" 
+                  height="600px" 
+                  loading="lazy" 
+                  fetchpriority="high">
+                  </iframe>
                    </div>
              </div>
         </section>
-       <section class="master-art">
-            <h2>Master the Art of Bad Parenting Game</h2>
-            <p>Dive into the chilling world of Bad Parenting...</p>
-            <button>Explore the Guide</button>
+       <section class="master-art" id="descrip">
+            <h2>Instructions du jeu FiddleBops</h2>
+             <p>Êtes-vous prêt à créer votre chef-d'œuvre musical FiddleBops ?</p>
+
             <div class="steps">
                  <div class="step">
-                   <h3>Step 1</h3>
-                   <h4>Download & Install</h4>
-                    <p> Get Bad Parenting from Steam and
-                    install it on your device</p>
+                   <h3>Première étape</h3>
+                   <h4>Ouvrir le jeu</h4>
+                   <p>Trouvez le bouton "Commencer le jeu" ou un bouton similaire sur le site Web et cliquez pour entrer dans le jeu. Généralement, aucune inscription ou connexion n'est requise.</p>
                  </div>
                  <div class="step">
-                    <h3>Step 2</h3>
-                    <h4>Launch & Immerse</h4>
-                   <p>Start the game and dive into its 90s
-                    cartoon-style graphics</p>
+                    <h3>Deuxième étape</h3>
+                    <h4>Commencer la création</h4>
+                   <p>Sélectionnez un rythme, ajoutez des instruments/éléments, mettez en boucle la lecture, modifiez et ajustez pour créer la musique que vous souhaitez.</p>
                  </div>
                  <div class="step">
-                   <h3>Step 3</h3>
-                   <h4>Explore & Uncover</h4>
-                    <p>Follow the storyline and discover the
-                    truth behind Mr. Red Face</p>
+                   <h3>Troisième étape</h3>
+                   <h4>Création terminée</h4>
+                    <p>Certains FiddleBops vous permettront de sauvegarder ou de partager votre travail.</p>
                  </div>
             </div>
          <div class="content-warning">
-           <h4>Content Warning</h4>
-           <p>Bad Parenting contains disturbing scenes and may trigger
-                memories related to domestic violence. Player discretion is
-                advised.</p>
+             <h4>Différents jeux FiddleBops :</h4>
+              <p>Les jeux FiddleBops peuvent avoir différentes versions ou différents thèmes, mais le cadre de jeu de base est généralement similaire. Les différentes versions peuvent avoir :<br>
+              
+            ① Différents instruments/éléments : certains peuvent se concentrer sur les percussions, d’autres sur les instruments d’orchestre et d’autres encore sur les effets sonores électroniques.<br>
+            
+            ② Différentes scènes : la conception des scènes peut varier.<br>
+            
+            ③ Différentes fonctions : certaines versions peuvent inclure des fonctions d’édition musicale plus avancées ou davantage de types d’effets spéciaux.</p>
            </div>
        </section>
        <section class="unique-features">
-         <h2>Explore the Unique Features of Bad Parenting</h2>
-           <p>Delve into Bad Parenting, a chilling narrative-driven horror game series that unveils dark family secrets...</p>
+         <h2>Points clés du gameplay de FiddleBops</h2>
+           <p>Dans l’ensemble, FiddleBops est un jeu de création musicale très populaire. Il est apprécié par de nombreux joueurs pour sa facilité d'utilisation, sa créativité et son plaisir.</p>
              <div class="feature-grid">
                <div class="feature">
-                 <h3>Immersive Gameplay Experience</h3>
-                 <p> Experience the unsettling narrative of Bad Parenting through
-                 the eyes of young protagonists, exploring a world filled with
-                 psychological horror and hidden meanings.</p>
+                 <h3>Explorer</h3>
+                 <p>Essayez librement diverses combinaisons d'instruments, d'effets sonores et de rythmes.</p>
                 </div>
                  <div class="feature">
-                     <h3>Rich Storyline</h3>
-                      <p>Uncover dark family secrets in Bad Parenting's gripping
-                     narrative, with each installment building upon the previous,
-                    creating an engaging and evolving horror universe.</p>
+                     <h3>Combiner</h3>
+                      <p>Combinez différents éléments sonores et voyez ce qu’il se passe.</p>
                  </div>
                   <div class="feature">
-                     <h3>Concise Gaming Experience</h3>
-                    <p>Immerse yourself in Bad Parenting's 30-minute intense
-                    gameplay sessions, perfect for players seeking a strong horror
-                    experience with limited time.</p>
+                     <h3>Expérimenter</h3>
+                    <p>Expérimentez avec différents rythmes et mélodies pour créer une musique unique.</p>
                  </div>
                  <div class="feature">
-                    <h3>Psychological Depth</h3>
-                    <p>Explore the psychological elements of Bad Parenting, where
-                     subtle hints and deeper meanings reward attentive players
-                   with a more profound understanding of this unsettling world.</p>
+                    <h3>Profiter</h3>
+                   <p>Le plus important est de profiter du plaisir de créer de la musique !</p>
                   </div>
             </div>
-         <button>Explore All Features</button>
        </section>
        <section class="faq">
-            <h2>Uncover the Secrets of Bad Parenting: Your Questions Answered</h2>
-           <p>Dive deep into the chilling world of Bad Parenting, where family dynamics take a dark turn...</p>
+           <h2>Foire aux questions sur FiddleBops</h2>
+           <p>Vous trouverez ci-dessous quelques questions fréquemment posées (FAQ) sur le jeu FiddleBops. Ces informations sont compilées à partir des expériences générales des utilisateurs et des commentaires en ligne.</p>
              <div class="faq-list">
              <!-- Faq items go here-->
+             <div class="faq-item">
+              <h3>Question : FiddleBops est-il gratuit ?</h3>
+               <p>Réponse : En général, la version de base de FiddleBops est gratuite, mais certaines plateformes peuvent proposer des extensions payantes ou des fonctionnalités avancées.</p>
+          </div>
                <div class="faq-item">
-                  <h3>What is Bad Parenting and how does it explore family dynamics?</h3>
-                    <p> Bad Parenting is a narrative-driven horror game series that delves into dark family dynamics and childhood trauma. It uses supernatural
-                    elements to explore disturbing family situations, offering a unique perspective on these sensitive topics.</p>
+                   <h3>Question : Ai-je besoin d’une expérience musicale pour jouer ?</h3>
+                    <p>Réponse : Aucune expérience musicale n'est requise pour jouer à ce jeu.</p>
               </div>
+              <div class="faq-item">
+                  <h3>Question : Puis-je sauvegarder et partager mes créations ?</h3>
+                  <p>Réponse : Oui, vous pouvez sauvegarder et partager vos créations musicales. Si le jeu prend en charge la sauvegarde, vous verrez probablement un bouton "Sauvegarder", "Exporter" ou similaire.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Question : Quelles sont les exigences du système ?</h3>
+                <p>Réponse : En général, FiddleBops peut être exécuté directement dans un navigateur sans installer de logiciel supplémentaire.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Question : Comment modifier le tempo ou le rythme de ma musique ?</h3>
+              <p>Réponse : Certains jeux FiddleBops offriront la possibilité de modifier le tempo ou le rythme. Recherchez les options correspondantes dans l’interface du jeu.</p>
+        </div>
              </div>
-        <button>Explore More FAQs</button>
-       </section>
-       <section class="dark-truth">
-           <h2>Unveiling the Dark Truth of Bad Parenting</h2>
-           <p>Bad Parenting: A narrative-driven horror game series that delves into the hidden traumas of childhood...</p>
-            <div class="dark-truth-container">
-                 <div class="our-mission">
-                     <h3>Our Mission</h3>
-                      <p>To shed light on often-overlooked aspects of family
-                    relationships through immersive and thought-provoking
-                     gameplay experiences.</p>
-                 </div>
-                  <div class="unique-features">
-                     <h3>Unique Features</h3>
-                     <ul>
-                        <li> Narrative-driven horror</li>
-                         <li>Deep psychological themes</li>
-                         <li>Retro-inspired visuals</li>
-                     </ul>
-                   </div>
-            </div>
-       <div class="strategies">
-        <h3>Strategies for Playing Bad Parenting</h3>
-         <!--Video cards go here-->
-        <div class="video-grid">
-            <div class="video-card">
-               <img src="video.png" alt="video preview">
-            </div>
-        </div>
-        </div>
-        <button>Explore Bad Parenting Story</button>
        </section>
 
-    <section class="partners">
-        <h2>Bad Parenting Our Partners</h2>
-         <div class="partner-grid">
-            <!--Partner logos go here-->
-            <div class="partner">
-                Partner Logo
-            </div>
-         </div>
-    </section>
 
     </main>
      <footer>
        <section class="footer-content">
          <div class="brand">
-           <div class="logo">Bad Parenting</div>
-           <p> Bad Parenting - Witness the suffering Mr. Red
+           <div class="logo">À propos de FiddleBops</div>
+           <p> Veuillez noter que les différentes versions de FiddleBops peuvent varier légèrement. La description ci-dessus fournit un cadre de jeu général.<br>Des étapes plus spécifiques peuvent être disponibles pour des versions spécifiques du jeu FiddleBops.
            </p>
          </div>
-         <div class="footer-links">
+        <div class="footer-links">
            <div class="sitemap">
-             <h3>Site Map</h3>
-            <ul>
-               <li><a href="#">Home</a></li>
-                 <li><a href="#">Bad Parenting</a></li>
-               <li><a href="#">Bad Parenting Story</a></li>
-              <li><a href="#">Sprunki</a></li>
-               <li><a href="#">Features</a></li>
-                <li><a href="#">How to Play</a></li>
-                 <li><a href="#">FAQs</a></li>
-                <li><a href="#">About</a></li>
+            <h3>Navigation du site</h3>
+           <ul>
+               <li><a href="/fr">Accueil</a></li>
+                 <li><a href="/fr#play">Commencer le jeu</a></li>
+                <li><a href="/fr#descrip">Fonctionnalités du jeu</a></li>
+                 <li><a href="#faq">FAQ</a></li>
+                <li><a href="/fr">Blog du jeu</a></li>
             </ul>
         </div>
-        <div class="legal">
-           <h3>Legal</h3>
+         <div class="legal">
+           <h3>Mentions légales</h3>
             <ul>
-                 <li><a href="#">Customer Support</a></li>
-                 <li><a href="#">Privacy Policy</a></li>
-                 <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Assistance aux joueurs</a></li>
+                 <li><a href="#">Politique de confidentialité</a></li>
+                  <li><a href="#">Service client</a></li>
             </ul>
-         </div>
+        </div>
          <div class="language">
-           <h3>Language</h3>
+           <h3>Sélection de la langue</h3>
            <ul>
-                <li><a href="#">English</a></li>
-                 <li><a href="#">中文</a></li>
-               <li><a href="#">繁體中文</a></li>
-                 <li><a href="#">日本語</a></li>
-                <li><a href="#">Deutsch</a></li>
-                 <li><a href="#">Español</a></li>
-               <li><a href="#">Italiano</a></li>
-                <li><a href="#">Português</a></li>
-                <li><a href="#">한국어</a></li>
-                 <li><a href="#">Français</a></li>
+            <li><a href="/">English</a></li>
+            <li><a href="/zh">中文</a></li>
+            <li><a href="/fr">Français</a></li>
+            <li><a href="/es">Español</a></li>
+            <li><a href="/de">Deutsch</a></li> 
+            <li><a href="/ja">日本語</a></li>
+            <li><a href="/ko">한국어</a></li>
             </ul>
          </div>
         </div>
       </section>
-     <p class="copyright">© 2025 badparenting.app All rights reserved.</p>
+     <p class="copyright">© 2025 FiddleBops Tous droits réservés.</p>
     </footer>
 </body>
 </html>

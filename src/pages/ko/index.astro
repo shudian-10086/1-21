@@ -3,11 +3,25 @@ import "../../styles/style.css";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bad Parenting Game</title>
+    <title>FiddleBops - 온라인 무료 음악 창작 게임</title>
+    <meta name="description" content="FiddleBops에서 음악 창작의 즐거움을 경험해 보세요. 이 무료 온라인 게임에서 독특한 음악 리듬을 만들 수 있습니다. 다양한 사운드를 탐험하고, 조합하고, 시도해 보세요.">
+    <meta name="keywords" content="FiddleBops, 온라인 음악 게임, 무료 게임, 음악 창작, 리듬 게임, 어린이 음악 게임">
+    <meta name="author" content="FiddleBops 팀">
+    <meta property="og:title" content="FiddleBops - 온라인 무료 음악 창작 게임">
+    <meta property="og:description" content="FiddleBops에서 음악 창작의 즐거움을 경험해 보세요. 이 무료 온라인 게임에서 독특한 음악 리듬을 만들 수 있습니다. 다양한 사운드를 탐험하고, 조합하고, 시도해 보세요.">
+    <meta property="og:image" content="URL_to_your_game_image">
+    <meta property="og:url" content="URL_to_your_website">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+     <link rel="canonical" href="URL_to_your_website" />
+     <link rel="preload" href="https://silkycell.github.io/FiddleBops/" as="document">
+     <link rel="dns-prefetch" href="https://silkycell.github.io">
+     <link rel="preconnect" href="https://silkycell.github.io" crossorigin>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
@@ -19,8 +33,8 @@ import "../../styles/style.css";
 });
   </script>
   <script>
-	function goToLink(event: Event) {
-	  const select = event.target as HTMLSelectElement;
+	function goToLink(event) {
+	  const select = event.target;
 	  const selectedOption = select.options[select.selectedIndex];
 	  const url = selectedOption.getAttribute('data-url');
 	  if (url) {
@@ -59,19 +73,19 @@ import "../../styles/style.css";
 <body>
     <header>
         <nav>
-            <div class="logo">Bad Parenting</div>
+            <div class="logo">FiddleBops</div>
             <button class="nav-toggle">
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sprunki</a></li>
-                <li><a href="#">New Games</a></li>
+                 <li><a href="/ko">홈</a></li>
+                <li><a href="/ko#play">FiddleBops 게임</a></li>
+                <li><a href="/ko#descrip">FiddleBops 플레이 방법</a></li>
             </ul>
 			<select style="float:right;">
-				<option value="">Language</option>
+				<option value="">언어</option>
 				<option data-url="/">English</option>
 				<option data-url="/zh">简体中文</option>  
 				<option data-url="/es">Español</option>
@@ -84,184 +98,150 @@ import "../../styles/style.css";
     </header>
    <main>
         <section class="hero">
-            <h1>Free Bad Parenting Game</h1>
-            <p>Experience the Chilling Horror of Bad Parenting in This Haunting Adventure...</p>
-            <button>Start Bad Parenting</button>
+             <h1>온라인 무료 FiddleBops 게임</h1>
+            <p>놀라운 음악 창작 여정을 시작하고, 당신의 재능을 마음껏 펼쳐 독특한 음악 리듬을 만들어 보세요...</p>
+            <button><a href="#play">게임 시작</a></button>
         </section>
-        <section class="more-games">
-             <h2>Discover More Bad Parenting Game Adventures</h2>
+        <section class="more-games" id="play">
+            <h2>FiddleBops: 마음을 사로잡는 음악 창작 게임</h2>
              <div class="game-grid">
                  <!-- Game cards go here -->
                  <div class="game-card">
-                    <img src="game-card.png" alt="game image">
-                   <h3> Game Name</h3>
+                  <iframe 
+                  src="https://silkycell.github.io/FiddleBops/" 
+                  width="100%" 
+                  height="600px" 
+                  loading="lazy" 
+                  fetchpriority="high">
+                  </iframe>
                    </div>
              </div>
         </section>
-       <section class="master-art">
-            <h2>Master the Art of Bad Parenting Game</h2>
-            <p>Dive into the chilling world of Bad Parenting...</p>
-            <button>Explore the Guide</button>
+       <section class="master-art" id="descrip">
+            <h2>FiddleBops 게임 설명</h2>
+             <p>FiddleBops 음악 걸작을 만들 준비가 되셨나요?</p>
+
             <div class="steps">
                  <div class="step">
-                   <h3>Step 1</h3>
-                   <h4>Download & Install</h4>
-                    <p> Get Bad Parenting from Steam and
-                    install it on your device</p>
+                   <h3>1단계</h3>
+                   <h4>게임 열기</h4>
+                    <p>웹사이트에서 "게임 시작" 또는 유사한 버튼을 찾아 클릭하여 게임에 들어갑니다. 일반적으로 등록이나 로그인이 필요하지 않습니다.</p>
                  </div>
                  <div class="step">
-                    <h3>Step 2</h3>
-                    <h4>Launch & Immerse</h4>
-                   <p>Start the game and dive into its 90s
-                    cartoon-style graphics</p>
+                    <h3>2단계</h3>
+                    <h4>창작 시작</h4>
+                    <p>비트를 선택하고, 악기/요소를 추가하고, 반복 재생하고, 수정 및 조정하여 원하는 음악을 만듭니다.</p>
                  </div>
                  <div class="step">
-                   <h3>Step 3</h3>
-                   <h4>Explore & Uncover</h4>
-                    <p>Follow the storyline and discover the
-                    truth behind Mr. Red Face</p>
+                   <h3>3단계</h3>
+                   <h4>창작 완료</h4>
+                    <p>일부 FiddleBops에서는 작품을 저장하거나 공유할 수 있습니다.</p>
                  </div>
             </div>
          <div class="content-warning">
-           <h4>Content Warning</h4>
-           <p>Bad Parenting contains disturbing scenes and may trigger
-                memories related to domestic violence. Player discretion is
-                advised.</p>
+            <h4>다양한 FiddleBops 게임:</h4>
+            <p>FiddleBops 게임에는 다양한 버전이나 테마가 있을 수 있지만, 기본적인 게임 플레이 프레임워크는 일반적으로 유사합니다. 다른 버전은 다음과 같을 수 있습니다:<br>
+            
+            ① 다양한 악기/요소: 일부는 타악기에 초점을 맞추고, 일부는 오케스트라 악기에 초점을 맞추고, 일부는 전자 음향 효과에 초점을 맞춥니다.<br>
+            
+            ② 다양한 장면: 장면 디자인이 다를 수 있습니다.<br>
+            
+            ③ 다양한 기능: 일부 버전에는 더 고급 음악 편집 기능 또는 더 많은 종류의 특수 효과가 포함될 수 있습니다.</p>
            </div>
        </section>
        <section class="unique-features">
-         <h2>Explore the Unique Features of Bad Parenting</h2>
-           <p>Delve into Bad Parenting, a chilling narrative-driven horror game series that unveils dark family secrets...</p>
+           <h2>FiddleBops 플레이 방법 주요 사항</h2>
+           <p>전반적으로 FiddleBops는 매우 인기 있는 음악 창작 게임입니다. 사용하기 쉽고 창의적이며 재미있다는 특징으로 많은 플레이어들에게 사랑받고 있습니다.</p>
              <div class="feature-grid">
                <div class="feature">
-                 <h3>Immersive Gameplay Experience</h3>
-                 <p> Experience the unsettling narrative of Bad Parenting through
-                 the eyes of young protagonists, exploring a world filled with
-                 psychological horror and hidden meanings.</p>
+                   <h3>탐험</h3>
+                    <p>다양한 악기, 음향 효과 및 리듬 조합을 자유롭게 시도해 보세요.</p>
                 </div>
                  <div class="feature">
-                     <h3>Rich Storyline</h3>
-                      <p>Uncover dark family secrets in Bad Parenting's gripping
-                     narrative, with each installment building upon the previous,
-                    creating an engaging and evolving horror universe.</p>
+                     <h3>조합</h3>
+                      <p>다양한 사운드 요소를 결합하여 어떤 일이 일어나는지 확인해 보세요.</p>
                  </div>
                   <div class="feature">
-                     <h3>Concise Gaming Experience</h3>
-                    <p>Immerse yourself in Bad Parenting's 30-minute intense
-                    gameplay sessions, perfect for players seeking a strong horror
-                    experience with limited time.</p>
+                     <h3>실험</h3>
+                    <p>다양한 리듬과 멜로디를 실험하여 독특한 음악을 만들어 보세요.</p>
                  </div>
                  <div class="feature">
-                    <h3>Psychological Depth</h3>
-                    <p>Explore the psychological elements of Bad Parenting, where
-                     subtle hints and deeper meanings reward attentive players
-                   with a more profound understanding of this unsettling world.</p>
+                   <h3>즐기기</h3>
+                    <p>가장 중요한 것은 음악 창작의 즐거움을 누리는 것입니다!</p>
                   </div>
             </div>
-         <button>Explore All Features</button>
        </section>
        <section class="faq">
-            <h2>Uncover the Secrets of Bad Parenting: Your Questions Answered</h2>
-           <p>Dive deep into the chilling world of Bad Parenting, where family dynamics take a dark turn...</p>
+             <h2>FiddleBops 자주 묻는 질문</h2>
+           <p>다음은 FiddleBops 게임에 대한 자주 묻는 질문(FAQ)입니다. 이 정보는 일반적인 사용자 경험과 온라인 피드백에서 수집되었습니다.</p>
              <div class="faq-list">
              <!-- Faq items go here-->
+             <div class="faq-item">
+              <h3>질문: FiddleBops는 무료인가요?</h3>
+               <p> 답변: 일반적으로 FiddleBops의 기본 버전은 무료이지만, 일부 플랫폼에서는 유료 확장 콘텐츠 또는 고급 기능을 제공할 수 있습니다.</p>
+          </div>
                <div class="faq-item">
-                  <h3>What is Bad Parenting and how does it explore family dynamics?</h3>
-                    <p> Bad Parenting is a narrative-driven horror game series that delves into dark family dynamics and childhood trauma. It uses supernatural
-                    elements to explore disturbing family situations, offering a unique perspective on these sensitive topics.</p>
+                 <h3>질문: 연주하기 위해 음악적 경험이 필요한가요?</h3>
+                  <p> 답변: 이 게임을 플레이하는 데 음악적 경험은 필요하지 않습니다.</p>
               </div>
+              <div class="faq-item">
+                <h3>질문: 내 작품을 저장하고 공유할 수 있나요?</h3>
+                 <p> 답변: 네, 음악 창작물을 저장하고 공유할 수 있습니다. 게임이 저장 기능을 지원하는 경우 "저장", "내보내기" 또는 유사한 버튼이 표시될 것입니다.</p>
+            </div>
+            <div class="faq-item">
+              <h3>질문: 시스템 요구 사항은 무엇인가요?</h3>
+               <p> 답변: 일반적으로 FiddleBops는 추가 소프트웨어를 설치하지 않고 브라우저에서 직접 실행할 수 있습니다.</p>
+          </div>
+          <div class="faq-item">
+            <h3>질문: 음악의 템포나 리듬을 어떻게 변경하나요?</h3>
+             <p> 답변: 일부 FiddleBops 게임에서는 템포나 리듬을 수정하는 기능을 제공합니다. 인터페이스에서 관련 옵션을 찾아보세요.</p>
+        </div>
              </div>
-        <button>Explore More FAQs</button>
-       </section>
-       <section class="dark-truth">
-           <h2>Unveiling the Dark Truth of Bad Parenting</h2>
-           <p>Bad Parenting: A narrative-driven horror game series that delves into the hidden traumas of childhood...</p>
-            <div class="dark-truth-container">
-                 <div class="our-mission">
-                     <h3>Our Mission</h3>
-                      <p>To shed light on often-overlooked aspects of family
-                    relationships through immersive and thought-provoking
-                     gameplay experiences.</p>
-                 </div>
-                  <div class="unique-features">
-                     <h3>Unique Features</h3>
-                     <ul>
-                        <li> Narrative-driven horror</li>
-                         <li>Deep psychological themes</li>
-                         <li>Retro-inspired visuals</li>
-                     </ul>
-                   </div>
-            </div>
-       <div class="strategies">
-        <h3>Strategies for Playing Bad Parenting</h3>
-         <!--Video cards go here-->
-        <div class="video-grid">
-            <div class="video-card">
-               <img src="video.png" alt="video preview">
-            </div>
-        </div>
-        </div>
-        <button>Explore Bad Parenting Story</button>
        </section>
 
-    <section class="partners">
-        <h2>Bad Parenting Our Partners</h2>
-         <div class="partner-grid">
-            <!--Partner logos go here-->
-            <div class="partner">
-                Partner Logo
-            </div>
-         </div>
-    </section>
 
     </main>
      <footer>
        <section class="footer-content">
          <div class="brand">
-           <div class="logo">Bad Parenting</div>
-           <p> Bad Parenting - Witness the suffering Mr. Red
+           <div class="logo">FiddleBops 정보</div>
+           <p> FiddleBops의 다른 버전은 약간씩 다를 수 있습니다. 위의 설명은 일반적인 게임 플레이 프레임워크를 제공합니다. <br>특정 FiddleBops 게임에 대한 더 구체적인 단계가 제공될 수 있습니다.
            </p>
          </div>
-         <div class="footer-links">
+        <div class="footer-links">
            <div class="sitemap">
-             <h3>Site Map</h3>
+            <h3>사이트 탐색</h3>
             <ul>
-               <li><a href="#">Home</a></li>
-                 <li><a href="#">Bad Parenting</a></li>
-               <li><a href="#">Bad Parenting Story</a></li>
-              <li><a href="#">Sprunki</a></li>
-               <li><a href="#">Features</a></li>
-                <li><a href="#">How to Play</a></li>
-                 <li><a href="#">FAQs</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </div>
-        <div class="legal">
-           <h3>Legal</h3>
-            <ul>
-                 <li><a href="#">Customer Support</a></li>
-                 <li><a href="#">Privacy Policy</a></li>
-                 <li><a href="#">Terms of Service</a></li>
+                <li><a href="/ko">홈</a></li>
+                 <li><a href="/ko#play">게임 시작</a></li>
+                <li><a href="/ko#descrip">플레이 특징</a></li>
+                  <li><a href="#faq">자주 묻는 질문</a></li>
+                <li><a href="/ko">게임 블로그</a></li>
             </ul>
          </div>
-         <div class="language">
-           <h3>Language</h3>
-           <ul>
-                <li><a href="#">English</a></li>
-                 <li><a href="#">中文</a></li>
-               <li><a href="#">繁體中文</a></li>
-                 <li><a href="#">日本語</a></li>
-                <li><a href="#">Deutsch</a></li>
-                 <li><a href="#">Español</a></li>
-               <li><a href="#">Italiano</a></li>
-                <li><a href="#">Português</a></li>
-                <li><a href="#">한국어</a></li>
-                 <li><a href="#">Français</a></li>
+         <div class="legal">
+           <h3>법률</h3>
+            <ul>
+                <li><a href="#">플레이어 지원</a></li>
+                 <li><a href="#">개인 정보 정책</a></li>
+                  <li><a href="#">고객 지원</a></li>
             </ul>
          </div>
-        </div>
-      </section>
-     <p class="copyright">© 2025 badparenting.app All rights reserved.</p>
+           <div class="language">
+            <h3>언어 선택</h3>
+            <ul>
+                 <li><a href="/">English</a></li>
+                 <li><a href="/zh">中文</a></li>
+                  <li><a href="/fr">Français</a></li>
+                 <li><a href="/es">Español</a></li>
+                  <li><a href="/de">Deutsch</a></li>
+                <li><a href="/ja">日本語</a></li>
+                <li><a href="/ko">한국어</a></li>
+             </ul>
+           </div>
+         </div>
+       </section>
+     <p class="copyright">© 2025 FiddleBops All rights reserved.</p>
     </footer>
 </body>
 </html>

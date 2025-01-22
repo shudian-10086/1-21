@@ -3,11 +3,25 @@ import "../../styles/style.css";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FiddleBops</title>
+    <title>FiddleBops - 在线免费音乐创作游戏</title>
+    <meta name="description" content="在FiddleBops中体验创作音乐的乐趣，这是一款免费的在线游戏，你可以在其中创作独特的音乐节奏。探索，组合和尝试各种声音。">
+    <meta name="keywords" content="FiddleBops, 在线音乐游戏, 免费游戏, 创作音乐, 节奏游戏, 儿童音乐游戏">
+    <meta name="author" content="FiddleBops 团队">
+    <meta property="og:title" content="FiddleBops - 在线免费音乐创作游戏">
+    <meta property="og:description" content="在FiddleBops中体验创作音乐的乐趣，这是一款免费的在线游戏，你可以在其中创作独特的音乐节奏。探索，组合和尝试各种声音。">
+    <meta property="og:image" content="URL_TO_YOUR_GAME_IMAGE">
+    <meta property="og:url" content="URL_TO_YOUR_WEBSITE">
+    <meta property="og:type" content="website">
+     <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="URL_TO_YOUR_WEBSITE" />
+    <link rel="preload" href="https://silkycell.github.io/FiddleBops/" as="document">
+    <link rel="dns-prefetch" href="https://silkycell.github.io">
+    <link rel="preconnect" href="https://silkycell.github.io" crossorigin>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
@@ -19,8 +33,8 @@ import "../../styles/style.css";
 });
   </script>
   <script>
-	function goToLink(event: Event) {
-	  const select = event.target as HTMLSelectElement;
+	function goToLink(event) {
+	  const select = event.target;
 	  const selectedOption = select.options[select.selectedIndex];
 	  const url = selectedOption.getAttribute('data-url');
 	  if (url) {
@@ -71,7 +85,7 @@ import "../../styles/style.css";
                 <li><a href="/zh#descrip">FiddleBops 玩法</a></li>
             </ul>
 			<select style="float:right;">
-				<option value="">Language</option>
+				<option value="">语言</option>
 				<option data-url="/">English</option>
 				<option data-url="/zh">简体中文</option>  
 				<option data-url="/es">Español</option>
@@ -86,10 +100,10 @@ import "../../styles/style.css";
         <section class="hero">
             <h1>在线免费 FiddleBops 游戏</h1>
             <p>令人惊奇的音乐创作之旅，充分发挥你的才能，创作独特的音乐节奏...</p>
-            <button>开始游戏</button>
+            <button><a href="#play">开始游戏</a></button>
         </section>
         <section class="more-games" id="play">
-             <h2>FiddleBops一款令人心动的音乐创作类游戏</h2>
+            <h2>FiddleBops一款令人心动的音乐创作类游戏</h2>
              <div class="game-grid">
                  <!-- Game cards go here -->
                  <div class="game-card">
@@ -98,13 +112,14 @@ import "../../styles/style.css";
                   width="100%" 
                   height="600px" 
                   loading="lazy" 
-                  fetchpriority="high">
+                  fetchpriority="high"
+                   title="FiddleBops 游戏">
                   </iframe>
                    </div>
              </div>
         </section>
        <section class="master-art" id="descrip">
-            <h2>FiddleBops 游戏说明</h2>
+           <h2>FiddleBops 游戏说明</h2>
             <p>准备好创作你的 Fiddlebops音乐杰作了吗?</p>
 
             <div class="steps">
@@ -126,8 +141,8 @@ import "../../styles/style.css";
             </div>
          <div class="content-warning">
            <h4>不同 FiddleBops 游戏:</h4>
-           <p>FiddleBops 游戏可能会有不同的版本或主题，但基本的玩法框架通常是类似的。不同版本可能会有：<br>
-
+            <p>FiddleBops 游戏可能会有不同的版本或主题，但基本的玩法框架通常是类似的。不同版本可能会有：<br>
+            
             ① 不同的乐器/元素: 有些可能侧重于打击乐，有些可能侧重于管弦乐器，有些可能侧重于电子音效。<br>
             
             ② 不同的场景: 场景设计可能会有所不同。<br>
@@ -136,8 +151,8 @@ import "../../styles/style.css";
            </div>
        </section>
        <section class="unique-features">
-         <h2>FiddleBops 玩法要点</h2>
-           <p>FiddleBops 总体上是一款很受欢迎的音乐创作游戏。它以简单易用、创意十足为特点，受到广大玩家的喜爱。</p>
+            <h2>FiddleBops 玩法要点</h2>
+            <p>FiddleBops 总体上是一款很受欢迎的音乐创作游戏。它以简单易用、创意十足为特点，受到广大玩家的喜爱。</p>
              <div class="feature-grid">
                <div class="feature">
                  <h3>探索</h3>
@@ -145,7 +160,7 @@ import "../../styles/style.css";
                 </div>
                  <div class="feature">
                      <h3>组合</h3>
-                      <p>将不同的声音元素组合在一起，看看会发生什么。</p>
+                     <p>将不同的声音元素组合在一起，看看会发生什么。</p>
                  </div>
                   <div class="feature">
                      <h3>实验</h3>
@@ -153,7 +168,7 @@ import "../../styles/style.css";
                  </div>
                  <div class="feature">
                     <h3>享受</h3>
-                    <p>最重要的就是享受音乐创作带来的乐趣！</p>
+                     <p>最重要的就是享受音乐创作带来的乐趣！</p>
                   </div>
             </div>
        </section>
@@ -171,15 +186,15 @@ import "../../styles/style.css";
                     <p> 答：玩此游戏不需要任何音乐经验。</p>
               </div>
               <div class="faq-item">
-                <h3>问：我可以保存并分享我的作品吗？</h3>
+                  <h3>问：我可以保存并分享我的作品吗？</h3>
                   <p> 答：是的，您可以保存并分享您的音乐创作。如果游戏支持保存功能，你可能会看到一个“保存”、“导出”或类似的按钮。</p>
             </div>
             <div class="faq-item">
-              <h3>问：系统要求是什么？</h3>
-                <p>答：一般情况下，FiddleBops 可以在浏览器中直接运行，无需安装任何额外软件。</p>
+               <h3>问：系统要求是什么？</h3>
+                 <p>答：一般情况下，FiddleBops 可以在浏览器中直接运行，无需安装任何额外软件。</p>
           </div>
           <div class="faq-item">
-            <h3>问：如何修改音乐的速度或节奏？</h3>
+              <h3>问：如何修改音乐的速度或节奏？</h3>
               <p> 答：有些 FiddleBops 游戏会提供修改速度或节奏的功能。寻找界面上的相关选项。</p>
         </div>
              </div>
@@ -196,33 +211,33 @@ import "../../styles/style.css";
          </div>
          <div class="footer-links">
            <div class="sitemap">
-             <h3>站点导航</h3>
+            <h3>站点导航</h3>
             <ul>
-               <li><a href="/zh">首页</a></li>
+                 <li><a href="/zh">首页</a></li>
                  <li><a href="/zh#play">开始游戏</a></li>
-                <li><a href="/zh#descrip">玩法特点</a></li>
-                 <li><a href="zh/#faq">常见问题</a></li>
+                  <li><a href="/zh#descrip">玩法特点</a></li>
+                  <li><a href="/zh#faq">常见问题</a></li>
                 <li><a href="/zh">游戏博客</a></li>
             </ul>
-        </div>
-        <div class="legal">
-           <h3>法律法规</h3>
-            <ul>
-                 <li><a href="#">玩家支持</a></li>
-                 <li><a href="#">隐私策略</a></li>
-                 <li><a href="#">客户服务</a></li>
-            </ul>
          </div>
-         <div class="language">
+        <div class="legal">
+             <h3>法律法规</h3>
+            <ul>
+                <li><a href="#">玩家支持</a></li>
+                 <li><a href="#">隐私策略</a></li>
+                  <li><a href="#">客户服务</a></li>
+            </ul>
+        </div>
+        <div class="language">
            <h3>语言选择</h3>
            <ul>
                 <li><a href="/">English</a></li>
                  <li><a href="/zh">中文</a></li>
-                 <li><a href="/fr">Français</a></li>
+                <li><a href="/fr">Français</a></li>
                  <li><a href="/es">Español</a></li>
-                 <li><a href="/de">Deutsch</a></li> 
-                 <li><a href="/ja">日本語</a></li>
-                 <li><a href="/ko">한국어</a></li>
+                 <li><a href="/de">Deutsch</a></li>
+                  <li><a href="/ja">日本語</a></li>
+                <li><a href="/ko">한국어</a></li>
             </ul>
          </div>
         </div>

@@ -7,7 +7,22 @@ import "../styles/style.css";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FiddleBops</title>
+     <title>FiddleBops - Create Music Online for Free</title>
+     <meta name="description" content="Experience the joy of making music with FiddleBops, a free online game where you can create unique musical rhythms. Explore, combine, and experiment with sounds.">
+    <meta name="keywords" content="FiddleBops, music game, free game, create music, rhythm game, kids game">
+     <meta name="author" content="FiddleBops Team">
+     <meta property="og:title" content="FiddleBops - Create Music Online for Free">
+     <meta property="og:description" content="Experience the joy of making music with FiddleBops, a free online game where you can create unique musical rhythms. Explore, combine, and experiment with sounds.">
+     <meta property="og:image" content="URL_to_your_game_image">
+    <meta property="og:url" content="URL_to_your_website">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+     <link rel="canonical" href="URL_to_your_website" />
+     <link rel="preload" href="https://silkycell.github.io/FiddleBops/" as="document">
+     <link rel="dns-prefetch" href="https://silkycell.github.io">
+     <link rel="preconnect" href="https://silkycell.github.io" crossorigin>
+
     <script>
       document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
@@ -19,8 +34,8 @@ import "../styles/style.css";
 });
   </script>
   <script>
-	function goToLink(event: Event) {
-	  const select = event.target as HTMLSelectElement;
+	function goToLink(event) {
+	  const select = event.target;
 	  const selectedOption = select.options[select.selectedIndex];
 	  const url = selectedOption.getAttribute('data-url');
 	  if (url) {
@@ -66,9 +81,9 @@ import "../styles/style.css";
                 <span class="hamburger"></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sprunki</a></li>
-                <li><a href="#">New Games</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#play">FiddleBops Game</a></li>
+                <li><a href="/#descrip">FiddleBops Gameplay</a></li>
             </ul>
 			<select style="float:right;">
 				<option value="">Language</option>
@@ -84,189 +99,150 @@ import "../styles/style.css";
     </header>
    <main>
         <section class="hero">
-            <h1>Free FiddleBops Game</h1>
-            <p>Experience the Chilling Horror of FiddleBops in This Haunting Adventure...</p>
-            <button>Start FiddleBops</button>
+            <h1>Free Online FiddleBops Game</h1>
+            <p>Embark on an amazing musical journey, unleash your talent, and create unique musical rhythms...</p>
+            <button><a href="#play">Start Game</a></button>
         </section>
-        <section class="more-games">
-             <h2>Discover More FiddleBops Game Adventures</h2>
+        <section class="more-games" id="play">
+            <h2>FiddleBops: A Captivating Music Creation Game</h2>
              <div class="game-grid">
                  <!-- Game cards go here -->
                  <div class="game-card">
                   <iframe 
                   src="https://silkycell.github.io/FiddleBops/" 
                   width="100%" 
-                  height="500px" 
+                  height="600px" 
                   loading="lazy" 
-                  fetchpriority="high">
+                  fetchpriority="high" title="FiddleBops Game">
                   </iframe>
                    </div>
              </div>
         </section>
-       <section class="master-art">
-            <h2>Master the Art of FiddleBops Game</h2>
-            <p>Dive into the chilling world of FiddleBops...</p>
-            <button>Explore the Guide</button>
+       <section class="master-art" id="descrip">
+           <h2>FiddleBops Game Instructions</h2>
+            <p>Are you ready to create your FiddleBops musical masterpiece?</p>
+
             <div class="steps">
                  <div class="step">
-                   <h3>Step 1</h3>
-                   <h4>Download & Install</h4>
-                    <p> Get FiddleBops from Steam and
-                    install it on your device</p>
+                   <h3>Step One</h3>
+                   <h4>Open Game</h4>
+                    <p>Find the "Start Game" or a similar button on the website and click to enter the game. Usually no registration or login is required</p>
                  </div>
                  <div class="step">
-                    <h3>Step 2</h3>
-                    <h4>Launch & Immerse</h4>
-                   <p>Start the game and dive into its 90s
-                    cartoon-style graphics</p>
+                    <h3>Step Two</h3>
+                    <h4>Start Creation</h4>
+                   <p>Choose a beat, add instruments/elements, loop the playback, modify and adjust to create the music you want</p>
                  </div>
                  <div class="step">
-                   <h3>Step 3</h3>
-                   <h4>Explore & Uncover</h4>
-                    <p>Follow the storyline and discover the
-                    truth behind Mr. Red Face</p>
+                   <h3>Step Three</h3>
+                   <h4>Creation Complete</h4>
+                    <p>Some FiddleBops will allow you to save or share your work</p>
                  </div>
             </div>
          <div class="content-warning">
-           <h4>Content Warning</h4>
-           <p>FiddleBops contains disturbing scenes and may trigger
-                memories related to domestic violence. Player discretion is
-                advised.</p>
+             <h4>Different FiddleBops Games:</h4>
+            <p>FiddleBops games may have different versions or themes, but the basic gameplay framework is usually similar. Different versions may have:<br>
+            
+            ① Different instruments/elements: Some may focus on percussion, some may focus on orchestral instruments, and some may focus on electronic sound effects.<br>
+            
+            ② Different scenes: The scene design may vary.<br>
+            
+            ③ Different functions: Some versions may include more advanced music editing functions or more types of special effects.</p>
            </div>
        </section>
        <section class="unique-features">
-         <h2>Explore the Unique Features of FiddleBops</h2>
-           <p>Delve into FiddleBops, a chilling narrative-driven horror game series that unveils dark family secrets...</p>
+          <h2>FiddleBops Gameplay Highlights</h2>
+           <p>Overall, FiddleBops is a very popular music creation game. It is loved by many players for its ease of use, creativity and fun.</p>
              <div class="feature-grid">
                <div class="feature">
-                 <h3>Immersive Gameplay Experience</h3>
-                 <p> Experience the unsettling narrative of FiddleBops through
-                 the eyes of young protagonists, exploring a world filled with
-                 psychological horror and hidden meanings.</p>
+                 <h3>Explore</h3>
+                 <p>Freely try various instruments, sound effects, and rhythm combinations.</p>
                 </div>
                  <div class="feature">
-                     <h3>Rich Storyline</h3>
-                      <p>Uncover dark family secrets in FiddleBops's gripping
-                     narrative, with each installment building upon the previous,
-                    creating an engaging and evolving horror universe.</p>
+                     <h3>Combine</h3>
+                      <p>Combine different sound elements and see what happens.</p>
                  </div>
                   <div class="feature">
-                     <h3>Concise Gaming Experience</h3>
-                    <p>Immerse yourself in FiddleBops's 30-minute intense
-                    gameplay sessions, perfect for players seeking a strong horror
-                    experience with limited time.</p>
+                     <h3>Experiment</h3>
+                     <p>Experiment with different rhythms and melodies to create unique music.</p>
                  </div>
                  <div class="feature">
-                    <h3>Psychological Depth</h3>
-                    <p>Explore the psychological elements of FiddleBops, where
-                     subtle hints and deeper meanings reward attentive players
-                   with a more profound understanding of this unsettling world.</p>
+                    <h3>Enjoy</h3>
+                    <p>The most important thing is to enjoy the fun of creating music!</p>
                   </div>
             </div>
-         <button>Explore All Features</button>
        </section>
        <section class="faq">
-            <h2>Uncover the Secrets of FiddleBops: Your Questions Answered</h2>
-           <p>Dive deep into the chilling world of FiddleBops, where family dynamics take a dark turn...</p>
+             <h2>FiddleBops Frequently Asked Questions</h2>
+           <p>Below are some frequently asked questions (FAQs) about the FiddleBops game, these are compiled from general user experiences and online feedback.</p>
              <div class="faq-list">
              <!-- Faq items go here-->
+             <div class="faq-item">
+              <h3>Q: Is FiddleBops free?</h3>
+                <p>A: Typically, the basic version of FiddleBops is free, but some platforms may offer paid extensions or advanced features.</p>
+          </div>
                <div class="faq-item">
-                  <h3>What is FiddleBops and how does it explore family dynamics?</h3>
-                    <p> FiddleBops is a narrative-driven horror game series that delves into dark family dynamics and childhood trauma. It uses supernatural
-                    elements to explore disturbing family situations, offering a unique perspective on these sensitive topics.</p>
+                   <h3>Q: Do I need any musical experience to play?</h3>
+                    <p>A: No musical experience is required to play this game.</p>
               </div>
+              <div class="faq-item">
+                  <h3>Q: Can I save and share my creations?</h3>
+                  <p>A: Yes, you can save and share your music creations. If the game supports saving, you will likely see a "Save", "Export", or similar button.</p>
+            </div>
+            <div class="faq-item">
+               <h3>Q: What are the system requirements?</h3>
+                <p>A: Generally, FiddleBops can be run directly in a browser without installing any additional software.</p>
+          </div>
+          <div class="faq-item">
+              <h3>Q: How do I change the tempo or rhythm of my music?</h3>
+              <p>A: Some FiddleBops games will offer the ability to modify the tempo or rhythm. Look for related options in the game interface.</p>
+        </div>
              </div>
-        <button>Explore More FAQs</button>
-       </section>
-       <section class="dark-truth">
-           <h2>Unveiling the Dark Truth of FiddleBops</h2>
-           <p>FiddleBops: A narrative-driven horror game series that delves into the hidden traumas of childhood...</p>
-            <div class="dark-truth-container">
-                 <div class="our-mission">
-                     <h3>Our Mission</h3>
-                      <p>To shed light on often-overlooked aspects of family
-                    relationships through immersive and thought-provoking
-                     gameplay experiences.</p>
-                 </div>
-                  <div class="unique-features">
-                     <h3>Unique Features</h3>
-                     <ul>
-                        <li> Narrative-driven horror</li>
-                         <li>Deep psychological themes</li>
-                         <li>Retro-inspired visuals</li>
-                     </ul>
-                   </div>
-            </div>
-       <div class="strategies">
-        <h3>Strategies for Playing FiddleBops</h3>
-         <!--Video cards go here-->
-        <div class="video-grid">
-            <div class="video-card">
-               <img src="video.png" alt="video preview">
-            </div>
-        </div>
-        </div>
-        <button>Explore FiddleBops Story</button>
        </section>
 
-    <section class="partners">
-        <h2>FiddleBops Our Partners</h2>
-         <div class="partner-grid">
-            <!--Partner logos go here-->
-            <div class="partner">
-                Partner Logo
-            </div>
-         </div>
-    </section>
 
     </main>
      <footer>
        <section class="footer-content">
          <div class="brand">
-           <div class="logo">FiddleBops</div>
-           <p> FiddleBops - Witness the suffering Mr. Red
+           <div class="logo">About FiddleBops</div>
+           <p>Please note that different versions of FiddleBops may vary slightly. The above description provides a general gameplay framework. <br>More specific steps may be available for specific versions of the FiddleBops game.
            </p>
          </div>
          <div class="footer-links">
            <div class="sitemap">
-             <h3>Site Map</h3>
-            <ul>
-               <li><a href="#">Home</a></li>
-                 <li><a href="#">FiddleBops</a></li>
-               <li><a href="#">FiddleBops Story</a></li>
-              <li><a href="#">Sprunki</a></li>
-               <li><a href="#">Features</a></li>
-                <li><a href="#">How to Play</a></li>
-                 <li><a href="#">FAQs</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </div>
-        <div class="legal">
-           <h3>Legal</h3>
-            <ul>
-                 <li><a href="#">Customer Support</a></li>
-                 <li><a href="#">Privacy Policy</a></li>
-                 <li><a href="#">Terms of Service</a></li>
+            <h3>Site Navigation</h3>
+             <ul>
+                <li><a href="/">Home</a></li>
+                 <li><a href="/#play">Start Game</a></li>
+                <li><a href="/#descrip">Gameplay Features</a></li>
+                 <li><a href="#faq">FAQ</a></li>
+                <li><a href="/">Game Blog</a></li>
             </ul>
          </div>
+         <div class="legal">
+           <h3>Legal</h3>
+            <ul>
+                <li><a href="#">Player Support</a></li>
+                 <li><a href="#">Privacy Policy</a></li>
+                 <li><a href="#">Customer Service</a></li>
+            </ul>
+        </div>
          <div class="language">
            <h3>Language</h3>
            <ul>
-                <li><a href="#">English</a></li>
-                 <li><a href="#">中文</a></li>
-               <li><a href="#">繁體中文</a></li>
-                 <li><a href="#">日本語</a></li>
-                <li><a href="#">Deutsch</a></li>
-                 <li><a href="#">Español</a></li>
-               <li><a href="#">Italiano</a></li>
-                <li><a href="#">Português</a></li>
-                <li><a href="#">한국어</a></li>
-                 <li><a href="#">Français</a></li>
+                <li><a href="/">English</a></li>
+                 <li><a href="/zh">Chinese</a></li>
+                  <li><a href="/fr">Français</a></li>
+                 <li><a href="/es">Español</a></li>
+                 <li><a href="/de">Deutsch</a></li>
+                <li><a href="/ja">日本語</a></li>
+                  <li><a href="/ko">한국어</a></li>
             </ul>
          </div>
         </div>
       </section>
-     <p class="copyright">© 2025 badparenting.app All rights reserved.</p>
+     <p class="copyright">© 2025 FiddleBops All rights reserved.</p>
     </footer>
 </body>
 </html>
