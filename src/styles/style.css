@@ -3,7 +3,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1e0d2d;
+    background-color: #0b1f2d;
     color: #ffffff;
 }
 a {
@@ -434,15 +434,12 @@ footer {
 }
 
 .brand {
-    flex:1;
+    flex:0.9;
 }
 .footer-links{
     display:flex;
     gap:20px;
      flex-wrap: wrap;
-}
-.footer-links> div{
-      flex:1;
 }
 
 .brand .logo {
@@ -491,12 +488,9 @@ footer {
     .nav-links {
       display: none; /* Initially hide menu */
          flex-direction: column;
-      width:100%;
-      background-color:#2f1d40;
-       padding:20px;
-        position:absolute;
-
-
+      width:90%;
+      background-color:#9f82ba;
+    padding:20px;
     }
       .nav-links.active {
       display: flex; /* Show menu when active class is added */

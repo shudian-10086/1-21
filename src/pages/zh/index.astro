@@ -1,0 +1,233 @@
+---
+import "../../styles/style.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiddleBops</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+});
+  </script>
+  <script>
+	function goToLink(event: Event) {
+	  const select = event.target as HTMLSelectElement;
+	  const selectedOption = select.options[select.selectedIndex];
+	  const url = selectedOption.getAttribute('data-url');
+	  if (url) {
+		window.location.href = url;
+	  }
+	}
+  
+	// 添加事件监听器
+	document.addEventListener('DOMContentLoaded', () => {
+	  const select = document.querySelector('select');
+	  if (select) {
+		select.addEventListener('change', goToLink);
+		
+		// 设置当前语言
+		const currentPath = window.location.pathname;
+		const options = Array.from(select.options);
+		const currentOption = options.find(option => 
+		  option.getAttribute('data-url') === currentPath
+		);
+		
+		if (currentOption) {
+		  currentOption.selected = true;
+		} else {
+		  // 如果是根路径或找不到匹配的选项，选择英文（默认语言）
+		  const defaultOption = options.find(option => 
+			option.getAttribute('data-url') === '/'
+		  );
+		  if (defaultOption) {
+			defaultOption.selected = true;
+		  }
+		}
+	  }
+	});
+  </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FiddleBops</div>
+            <button class="nav-toggle">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/zh">首页</a></li>
+                <li><a href="/zh#play">FiddleBops 游戏</a></li>
+                <li><a href="/zh#descrip">FiddleBops 玩法</a></li>
+            </ul>
+			<select style="float:right;">
+				<option value="">Language</option>
+				<option data-url="/">English</option>
+				<option data-url="/zh">简体中文</option>  
+				<option data-url="/es">Español</option>
+				<option data-url="/fr">Français</option>
+				<option data-url="/de">Deutsch</option>
+				<option data-url="/ja">日本語</option>
+				<option data-url="/ko">한국어</option>
+			  </select>
+        </nav>
+    </header>
+   <main>
+        <section class="hero">
+            <h1>在线免费 FiddleBops 游戏</h1>
+            <p>令人惊奇的音乐创作之旅，充分发挥你的才能，创作独特的音乐节奏...</p>
+            <button>开始游戏</button>
+        </section>
+        <section class="more-games" id="play">
+             <h2>FiddleBops一款令人心动的音乐创作类游戏</h2>
+             <div class="game-grid">
+                 <!-- Game cards go here -->
+                 <div class="game-card">
+                  <iframe 
+                  src="https://silkycell.github.io/FiddleBops/" 
+                  width="100%" 
+                  height="600px" 
+                  loading="lazy" 
+                  fetchpriority="high">
+                  </iframe>
+                   </div>
+             </div>
+        </section>
+       <section class="master-art" id="descrip">
+            <h2>FiddleBops 游戏说明</h2>
+            <p>准备好创作你的 Fiddlebops音乐杰作了吗?</p>
+
+            <div class="steps">
+                 <div class="step">
+                   <h3>第一步</h3>
+                   <h4>打开游戏</h4>
+                    <p> 在网站上找到“开始游戏”或类似的按钮，点击进入游戏。通常无需注册或登录</p>
+                 </div>
+                 <div class="step">
+                    <h3>第二步</h3>
+                    <h4>开始创作</h4>
+                   <p>选择节拍，添加乐器/元素，循环播放，修改和调整创造你想要的音乐</p>
+                 </div>
+                 <div class="step">
+                   <h3>第三步</h3>
+                   <h4>创作完成</h4>
+                    <p>一些 FiddleBops 会允许你保存或分享你的作品</p>
+                 </div>
+            </div>
+         <div class="content-warning">
+           <h4>不同 FiddleBops 游戏:</h4>
+           <p>FiddleBops 游戏可能会有不同的版本或主题，但基本的玩法框架通常是类似的。不同版本可能会有：<br>
+
+            ① 不同的乐器/元素: 有些可能侧重于打击乐，有些可能侧重于管弦乐器，有些可能侧重于电子音效。<br>
+            
+            ② 不同的场景: 场景设计可能会有所不同。<br>
+            
+            ③ 不同的功能: 有些版本可能包含更高级的音乐编辑功能，或者更多种类的特殊效果。</p>
+           </div>
+       </section>
+       <section class="unique-features">
+         <h2>FiddleBops 玩法要点</h2>
+           <p>FiddleBops 总体上是一款很受欢迎的音乐创作游戏。它以简单易用、创意十足为特点，受到广大玩家的喜爱。</p>
+             <div class="feature-grid">
+               <div class="feature">
+                 <h3>探索</h3>
+                 <p>  自由尝试各种乐器、音效和节奏组合。</p>
+                </div>
+                 <div class="feature">
+                     <h3>组合</h3>
+                      <p>将不同的声音元素组合在一起，看看会发生什么。</p>
+                 </div>
+                  <div class="feature">
+                     <h3>实验</h3>
+                    <p>尝试不同的节奏、旋律，创作出独特的音乐。</p>
+                 </div>
+                 <div class="feature">
+                    <h3>享受</h3>
+                    <p>最重要的就是享受音乐创作带来的乐趣！</p>
+                  </div>
+            </div>
+       </section>
+       <section class="faq">
+            <h2>FiddleBops常见问题解答</h2>
+           <p>以下是关于 FiddleBops 游戏的常见问题解答（FAQ），这些信息是从一般用户体验和在线反馈中整理而来的</p>
+             <div class="faq-list">
+             <!-- Faq items go here-->
+             <div class="faq-item">
+              <h3>问：FiddleBops 是免费的吗？</h3>
+                <p> 答：通常情况下，基础版本的 FiddleBops 是免费的，但有些平台可能会提供付费的扩展内容或高级功能。</p>
+          </div>
+               <div class="faq-item">
+                  <h3>问：我需要有任何音乐经验才能演奏吗?</h3>
+                    <p> 答：玩此游戏不需要任何音乐经验。</p>
+              </div>
+              <div class="faq-item">
+                <h3>问：我可以保存并分享我的作品吗？</h3>
+                  <p> 答：是的，您可以保存并分享您的音乐创作。如果游戏支持保存功能，你可能会看到一个“保存”、“导出”或类似的按钮。</p>
+            </div>
+            <div class="faq-item">
+              <h3>问：系统要求是什么？</h3>
+                <p>答：一般情况下，FiddleBops 可以在浏览器中直接运行，无需安装任何额外软件。</p>
+          </div>
+          <div class="faq-item">
+            <h3>问：如何修改音乐的速度或节奏？</h3>
+              <p> 答：有些 FiddleBops 游戏会提供修改速度或节奏的功能。寻找界面上的相关选项。</p>
+        </div>
+             </div>
+       </section>
+
+
+    </main>
+     <footer>
+       <section class="footer-content">
+         <div class="brand">
+           <div class="logo">FiddleBops说明</div>
+           <p> 请注意，不同版本的 FiddleBops 可能会有细微差别。以上描述提供的是一个通用的游戏玩法框架。 <br>如果有特定的 FiddleBops 游戏，可以提供更具体的步骤。
+           </p>
+         </div>
+         <div class="footer-links">
+           <div class="sitemap">
+             <h3>站点导航</h3>
+            <ul>
+               <li><a href="/zh">首页</a></li>
+                 <li><a href="/zh#play">开始游戏</a></li>
+                <li><a href="/zh#descrip">玩法特点</a></li>
+                 <li><a href="zh/#faq">常见问题</a></li>
+                <li><a href="/zh">游戏博客</a></li>
+            </ul>
+        </div>
+        <div class="legal">
+           <h3>法律法规</h3>
+            <ul>
+                 <li><a href="#">玩家支持</a></li>
+                 <li><a href="#">隐私策略</a></li>
+                 <li><a href="#">客户服务</a></li>
+            </ul>
+         </div>
+         <div class="language">
+           <h3>语言选择</h3>
+           <ul>
+                <li><a href="/">English</a></li>
+                 <li><a href="/zh">中文</a></li>
+                 <li><a href="/fr">Français</a></li>
+                 <li><a href="/es">Español</a></li>
+                 <li><a href="/de">Deutsch</a></li> 
+                 <li><a href="/ja">日本語</a></li>
+                 <li><a href="/ko">한국어</a></li>
+            </ul>
+         </div>
+        </div>
+      </section>
+     <p class="copyright">© 2025 FiddleBops All rights reserved.</p>
+    </footer>
+</body>
+</html>
