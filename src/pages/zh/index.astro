@@ -3,25 +3,31 @@ import "../../styles/style.css";
 ---
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FiddleBops - 在线免费音乐创作游戏</title>
+    <title>FiddleBops Incredibox - 在线免费音乐创作游戏</title>
     <meta name="description" content="在FiddleBops中体验创作音乐的乐趣，这是一款免费的在线游戏，你可以在其中创作独特的音乐节奏。探索，组合和尝试各种声音。">
-    <meta name="keywords" content="FiddleBops, 在线音乐游戏, 免费游戏, 创作音乐, 节奏游戏, 儿童音乐游戏">
-    <meta name="author" content="FiddleBops 团队">
-    <meta property="og:title" content="FiddleBops - 在线免费音乐创作游戏">
+    <meta name="keywords" content="FiddleBops,FiddleBops Incredibox, 在线音乐游戏, 免费游戏, 创作音乐">
+    <meta property="og:title" content="FiddleBops Incredibox - 在线免费音乐创作游戏">
     <meta property="og:description" content="在FiddleBops中体验创作音乐的乐趣，这是一款免费的在线游戏，你可以在其中创作独特的音乐节奏。探索，组合和尝试各种声音。">
-    <meta property="og:image" content="URL_TO_YOUR_GAME_IMAGE">
-    <meta property="og:url" content="URL_TO_YOUR_WEBSITE">
-    <meta property="og:type" content="website">
-     <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <link rel="canonical" href="URL_TO_YOUR_WEBSITE" />
-    <link rel="preload" href="https://silkycell.github.io/FiddleBops/" as="document">
-    <link rel="dns-prefetch" href="https://silkycell.github.io">
-    <link rel="preconnect" href="https://silkycell.github.io" crossorigin>
+    <meta property="og:url" content="https://www.playfiddlebops.com/zh"/>
+    <meta property="og:site_name" content="FiddleBops Incredibox"/>
+    <meta property="og:image" content="https://www.playfiddlebops.com/img-t.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="https://www.playfiddlebops.com"/>
+    <meta name="twitter:creator" content="FiddleBops Incredibox"/>
+    <meta name="twitter:title" content="FiddleBops Incredibox - Free Online Music Creation Game"/>
+    <meta name="twitter:description" content="Experience the joy of making music with FiddleBops, a free online game where you can create unique musical rhythms."/>
+    <meta name="twitter:image" content="https://www.playfiddlebops.com/img-t.jpg"/>
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="https://www.playfiddlebops.com/favicon.ico"/>
+     <link rel="canonical" href="https://www.playfiddlebops.com/zh" />
+     <link rel="preload" href="https://silkycell.github.io/FiddleBops/" as="document">
+     <link rel="dns-prefetch" href="https://silkycell.github.io">
+     <link rel="preconnect" href="https://silkycell.github.io" crossorigin>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
@@ -32,89 +38,50 @@ import "../../styles/style.css";
     });
 });
   </script>
-  <script>
-	function goToLink(event) {
-	  const select = event.target;
-	  const selectedOption = select.options[select.selectedIndex];
-	  const url = selectedOption.getAttribute('data-url');
-	  if (url) {
-		window.location.href = url;
-	  }
-	}
-  
-	// 添加事件监听器
-	document.addEventListener('DOMContentLoaded', () => {
-	  const select = document.querySelector('select');
-	  if (select) {
-		select.addEventListener('change', goToLink);
-		
-		// 设置当前语言
-		const currentPath = window.location.pathname;
-		const options = Array.from(select.options);
-		const currentOption = options.find(option => 
-		  option.getAttribute('data-url') === currentPath
-		);
-		
-		if (currentOption) {
-		  currentOption.selected = true;
-		} else {
-		  // 如果是根路径或找不到匹配的选项，选择英文（默认语言）
-		  const defaultOption = options.find(option => 
-			option.getAttribute('data-url') === '/'
-		  );
-		  if (defaultOption) {
-			defaultOption.selected = true;
-		  }
-		}
-	  }
-	});
-  </script>
+    <script>
+        let iframeLoaded = false; // Track if iframe is loaded
+        const iframe = document.getElementById("fiddlebops-iframe"); // Moved outside loadIframe to be accessible
+        const playButton = document.getElementById("playButton");
+
+        function loadIframe() {
+            iframe.src = "https://silkycell.github.io/FiddleBops/"; // Set the source
+             playButton.style.display = "none"; //Hide button
+            iframeLoaded = true; // Set to true so it's not loaded again
+            iframe.focus(); // Give focus to iframe for keyboard controls if necessary
+        }
+          playButton.addEventListener("click", loadIframe); // Listen for click
+    </script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">FiddleBops</div>
-            <button class="nav-toggle">
+<nav>
+            <div class = "nav-top">
+                <div class="logo"><a href="/zh">FiddleBops</a></div>
+               <button class="nav-toggle">
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
             </button>
+
+            </div>
             <ul class="nav-links">
                 <li><a href="/zh">首页</a></li>
-                <li><a href="/zh#play">FiddleBops 游戏</a></li>
                 <li><a href="/zh#descrip">FiddleBops 玩法</a></li>
+                <li><a href="/zh#faq">常见问题</a></li>
             </ul>
-			<select style="float:right;">
-				<option value="">语言</option>
-				<option data-url="/">English</option>
-				<option data-url="/zh">简体中文</option>  
-				<option data-url="/es">Español</option>
-				<option data-url="/fr">Français</option>
-				<option data-url="/de">Deutsch</option>
-				<option data-url="/ja">日本語</option>
-				<option data-url="/ko">한국어</option>
-			  </select>
+
         </nav>
     </header>
    <main>
-        <section class="hero">
+        <section class="hero more-games">
             <h1>在线免费 FiddleBops 游戏</h1>
             <p>令人惊奇的音乐创作之旅，充分发挥你的才能，创作独特的音乐节奏...</p>
-            <button><a href="#play">开始游戏</a></button>
-        </section>
-        <section class="more-games" id="play">
-            <h2>FiddleBops一款令人心动的音乐创作类游戏</h2>
              <div class="game-grid">
                  <!-- Game cards go here -->
-                 <div class="game-card">
-                  <iframe 
-                  src="https://silkycell.github.io/FiddleBops/" 
-                  width="100%" 
-                  height="600px" 
-                  loading="lazy" 
-                  fetchpriority="high"
-                   title="FiddleBops 游戏">
-                  </iframe>
+                 <div class="game-card responsive-iframe-container">
+                    <iframe id="fiddlebops-iframe" src="" allowfullscreen width="100%" height="100%"></iframe>
+                        <button id="playButton">▶️ Play</button>
+                    </div>
                    </div>
              </div>
         </section>
@@ -172,7 +139,7 @@ import "../../styles/style.css";
                   </div>
             </div>
        </section>
-       <section class="faq">
+       <section class="faq" id="faq">
             <h2>FiddleBops常见问题解答</h2>
            <p>以下是关于 FiddleBops 游戏的常见问题解答（FAQ），这些信息是从一般用户体验和在线反馈中整理而来的</p>
              <div class="faq-list">
@@ -210,22 +177,11 @@ import "../../styles/style.css";
            </p>
          </div>
          <div class="footer-links">
-           <div class="sitemap">
-            <h3>站点导航</h3>
-            <ul>
-                 <li><a href="/zh">首页</a></li>
-                 <li><a href="/zh#play">开始游戏</a></li>
-                  <li><a href="/zh#descrip">玩法特点</a></li>
-                  <li><a href="/zh#faq">常见问题</a></li>
-                <li><a href="/zh">游戏博客</a></li>
-            </ul>
-         </div>
         <div class="legal">
              <h3>法律法规</h3>
             <ul>
-                <li><a href="#">玩家支持</a></li>
-                 <li><a href="#">隐私策略</a></li>
-                  <li><a href="#">客户服务</a></li>
+                 <li><a href="/zh/privacy" rel="nofollow">隐私政策</a></li>
+                  <li><a href="/zh/terms-of-service" rel="nofollow">服务条款</a></li>
             </ul>
         </div>
         <div class="language">

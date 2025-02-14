@@ -7,18 +7,24 @@ import "../../styles/style.css";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FiddleBops - Jeu de création musicale en ligne gratuit</title>
-    <meta name="description" content="Découvrez le plaisir de créer de la musique avec FiddleBops, un jeu en ligne gratuit où vous pouvez composer des rythmes musicaux uniques. Explorez, combinez et expérimentez avec différents sons.">
-    <meta name="keywords" content="FiddleBops, jeu de musique en ligne, jeu gratuit, création musicale, jeu de rythme, jeu de musique pour enfants">
-    <meta name="author" content="L'équipe FiddleBops">
-    <meta property="og:title" content="FiddleBops - Jeu de création musicale en ligne gratuit">
-    <meta property="og:description" content="Découvrez le plaisir de créer de la musique avec FiddleBops, un jeu en ligne gratuit où vous pouvez composer des rythmes musicaux uniques. Explorez, combinez et expérimentez avec différents sons.">
-    <meta property="og:image" content="URL_to_your_game_image">
-    <meta property="og:url" content="URL_to_your_website">
-    <meta property="og:type" content="website">
+    <title>FiddleBops Incredibox - Jeu de création musicale en ligne gratuit</title>
+    <meta name="description" content="Découvrez le plaisir de créer de la musique avec FiddleBops, un jeu en ligne gratuit où vous pouvez composer des rythmes musicaux uniques.">
+    <meta name="keywords" content="FiddleBops, jeu de musique en ligne, jeu gratuit, création musicale, jeu de rythme">
+    <meta property="og:title" content="FiddleBops Incredibox - Jeu de création musicale en ligne gratuit">
+    <meta property="og:description" content="Découvrez le plaisir de créer de la musique avec FiddleBops, un jeu en ligne gratuit où vous pouvez composer des rythmes musicaux uniques.">
+    <meta property="og:url" content="https://www.playfiddlebops.com/fr"/>
+    <meta property="og:site_name" content="FiddleBops Incredibox"/>
+    <meta property="og:image" content="https://www.playfiddlebops.com/img-t.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="https://www.playfiddlebops.com"/>
+    <meta name="twitter:creator" content="FiddleBops Incredibox"/>
+    <meta name="twitter:title" content="FiddleBops Incredibox - Free Online Music Creation Game"/>
+    <meta name="twitter:description" content="Experience the joy of making music with FiddleBops, a free online game where you can create unique musical rhythms."/>
+    <meta name="twitter:image" content="https://www.playfiddlebops.com/img-t.jpg"/>
     <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-     <link rel="canonical" href="URL_to_your_website" />
+    <link rel="icon" href="https://www.playfiddlebops.com/favicon.ico"/>
+     <link rel="canonical" href="https://www.playfiddlebops.com/fr" />
      <link rel="preload" href="https://silkycell.github.io/FiddleBops/" as="document">
      <link rel="dns-prefetch" href="https://silkycell.github.io">
      <link rel="preconnect" href="https://silkycell.github.io" crossorigin>
@@ -32,88 +38,50 @@ import "../../styles/style.css";
     });
 });
   </script>
-  <script>
-	function goToLink(event) {
-	  const select = event.target;
-	  const selectedOption = select.options[select.selectedIndex];
-	  const url = selectedOption.getAttribute('data-url');
-	  if (url) {
-		window.location.href = url;
-	  }
-	}
-  
-	// 添加事件监听器
-	document.addEventListener('DOMContentLoaded', () => {
-	  const select = document.querySelector('select');
-	  if (select) {
-		select.addEventListener('change', goToLink);
-		
-		// 设置当前语言
-		const currentPath = window.location.pathname;
-		const options = Array.from(select.options);
-		const currentOption = options.find(option => 
-		  option.getAttribute('data-url') === currentPath
-		);
-		
-		if (currentOption) {
-		  currentOption.selected = true;
-		} else {
-		  // 如果是根路径或找不到匹配的选项，选择英文（默认语言）
-		  const defaultOption = options.find(option => 
-			option.getAttribute('data-url') === '/'
-		  );
-		  if (defaultOption) {
-			defaultOption.selected = true;
-		  }
-		}
-	  }
-	});
-  </script>
+    <script>
+        let iframeLoaded = false; // Track if iframe is loaded
+        const iframe = document.getElementById("fiddlebops-iframe"); // Moved outside loadIframe to be accessible
+        const playButton = document.getElementById("playButton");
+
+        function loadIframe() {
+            iframe.src = "https://silkycell.github.io/FiddleBops/"; // Set the source
+             playButton.style.display = "none"; //Hide button
+            iframeLoaded = true; // Set to true so it's not loaded again
+            iframe.focus(); // Give focus to iframe for keyboard controls if necessary
+        }
+          playButton.addEventListener("click", loadIframe); // Listen for click
+    </script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">FiddleBops</div>
-            <button class="nav-toggle">
+<nav>
+            <div class = "nav-top">
+                <div class="logo"><a href="/fr">FiddleBops</a></div>
+               <button class="nav-toggle">
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
             </button>
+
+            </div>
             <ul class="nav-links">
                 <li><a href="/fr">Accueil</a></li>
-                <li><a href="/fr#play">Jeu FiddleBops</a></li>
                 <li><a href="/fr#descrip">Comment jouer à FiddleBops</a></li>
+                <li><a href="/fr#faq">FAQ</a></li>
             </ul>
-			<select style="float:right;">
-				<option value="">Langue</option>
-				<option data-url="/">English</option>
-				<option data-url="/zh">简体中文</option>  
-				<option data-url="/es">Español</option>
-				<option data-url="/fr">Français</option>
-				<option data-url="/de">Deutsch</option>
-				<option data-url="/ja">日本語</option>
-				<option data-url="/ko">한국어</option>
-			  </select>
+
         </nav>
     </header>
    <main>
-        <section class="hero">
+        <section class="hero more-games">
             <h1>Jeu FiddleBops gratuit en ligne</h1>
             <p>Embarquez pour un voyage musical incroyable, libérez votre talent et créez des rythmes musicaux uniques...</p>
-            <button><a href="#play">Commencer le jeu</a></button>
-        </section>
-        <section class="more-games" id="play">
-             <h2>FiddleBops : Un jeu de création musicale captivant</h2>
              <div class="game-grid">
                  <!-- Game cards go here -->
-                 <div class="game-card">
-                  <iframe 
-                  src="https://silkycell.github.io/FiddleBops/" 
-                  width="100%" 
-                  height="600px" 
-                  loading="lazy" 
-                  fetchpriority="high">
-                  </iframe>
+                 <div class="game-card responsive-iframe-container">
+                    <iframe id="fiddlebops-iframe" src="" allowfullscreen width="100%" height="100%"></iframe>
+                        <button id="playButton">▶️ Play</button>
+                    </div>
                    </div>
              </div>
         </section>
@@ -171,7 +139,7 @@ import "../../styles/style.css";
                   </div>
             </div>
        </section>
-       <section class="faq">
+       <section class="faq" id="faq">
            <h2>Foire aux questions sur FiddleBops</h2>
            <p>Vous trouverez ci-dessous quelques questions fréquemment posées (FAQ) sur le jeu FiddleBops. Ces informations sont compilées à partir des expériences générales des utilisateurs et des commentaires en ligne.</p>
              <div class="faq-list">
@@ -209,22 +177,11 @@ import "../../styles/style.css";
            </p>
          </div>
         <div class="footer-links">
-           <div class="sitemap">
-            <h3>Navigation du site</h3>
-           <ul>
-               <li><a href="/fr">Accueil</a></li>
-                 <li><a href="/fr#play">Commencer le jeu</a></li>
-                <li><a href="/fr#descrip">Fonctionnalités du jeu</a></li>
-                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="/fr">Blog du jeu</a></li>
-            </ul>
-        </div>
          <div class="legal">
            <h3>Mentions légales</h3>
             <ul>
-                <li><a href="#">Assistance aux joueurs</a></li>
-                 <li><a href="#">Politique de confidentialité</a></li>
-                  <li><a href="#">Service client</a></li>
+                 <li><a href="/fr/privacy" rel="nofollow">Politique de confidentialité</a></li>
+                  <li><a href="/fr/terms-of-service" rel="nofollow">Conditions d'utilisation</a></li>
             </ul>
         </div>
          <div class="language">

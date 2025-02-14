@@ -7,18 +7,25 @@ import "../styles/style.css";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>FiddleBops - Create Music Online for Free</title>
-     <meta name="description" content="Experience the joy of making music with FiddleBops, a free online game where you can create unique musical rhythms. Explore, combine, and experiment with sounds.">
-    <meta name="keywords" content="FiddleBops, music game, free game, create music, rhythm game, kids game">
-     <meta name="author" content="FiddleBops Team">
-     <meta property="og:title" content="FiddleBops - Create Music Online for Free">
-     <meta property="og:description" content="Experience the joy of making music with FiddleBops, a free online game where you can create unique musical rhythms. Explore, combine, and experiment with sounds.">
-     <meta property="og:image" content="URL_to_your_game_image">
-    <meta property="og:url" content="URL_to_your_website">
-    <meta property="og:type" content="website">
+     <title>FiddleBops Incredibox - Free Online Music Creation Game</title>
+     <meta name="description" content="Experience the joy of making music with FiddleBops, a free online game where you can create unique musical rhythms. ">
+    <meta name="keywords" content="FiddleBops, FiddleBops Incredibox，music game, free game">
+     <meta property="og:title" content="FiddleBops Incredibox - Free Online Music Creation Game">
+     <meta property="og:description" content="Experience the joy of making music with FiddleBops, a free online game where you can create unique musical rhythms. ">
+    <meta property="og:url" content="https://www.playfiddlebops.com/"/>
+    <meta property="og:site_name" content="FiddleBops Incredibox"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:image" content="https://www.playfiddlebops.com/img-t.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="https://www.playfiddlebops.com"/>
+    <meta name="twitter:creator" content="FiddleBops Incredibox"/>
+    <meta name="twitter:title" content="FiddleBops Incredibox - Free Online Music Creation Game"/>
+    <meta name="twitter:description" content="Experience the joy of making music with FiddleBops, a free online game where you can create unique musical rhythms."/>
+    <meta name="twitter:image" content="https://www.playfiddlebops.com/img-t.jpg"/>
     <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-     <link rel="canonical" href="URL_to_your_website" />
+    <link rel="icon" href="https://www.playfiddlebops.com/favicon.ico"/>
+     <link rel="canonical" href="https://www.playfiddlebops.com/" />
      <link rel="preload" href="https://silkycell.github.io/FiddleBops/" as="document">
      <link rel="dns-prefetch" href="https://silkycell.github.io">
      <link rel="preconnect" href="https://silkycell.github.io" crossorigin>
@@ -33,88 +40,50 @@ import "../styles/style.css";
     });
 });
   </script>
-  <script>
-	function goToLink(event) {
-	  const select = event.target;
-	  const selectedOption = select.options[select.selectedIndex];
-	  const url = selectedOption.getAttribute('data-url');
-	  if (url) {
-		window.location.href = url;
-	  }
-	}
-  
-	// 添加事件监听器
-	document.addEventListener('DOMContentLoaded', () => {
-	  const select = document.querySelector('select');
-	  if (select) {
-		select.addEventListener('change', goToLink);
-		
-		// 设置当前语言
-		const currentPath = window.location.pathname;
-		const options = Array.from(select.options);
-		const currentOption = options.find(option => 
-		  option.getAttribute('data-url') === currentPath
-		);
-		
-		if (currentOption) {
-		  currentOption.selected = true;
-		} else {
-		  // 如果是根路径或找不到匹配的选项，选择英文（默认语言）
-		  const defaultOption = options.find(option => 
-			option.getAttribute('data-url') === '/'
-		  );
-		  if (defaultOption) {
-			defaultOption.selected = true;
-		  }
-		}
-	  }
-	});
-  </script>
+    <script>
+        let iframeLoaded = false; // Track if iframe is loaded
+        const iframe = document.getElementById("fiddlebops-iframe"); // Moved outside loadIframe to be accessible
+        const playButton = document.getElementById("playButton");
+
+        function loadIframe() {
+            iframe.src = "https://silkycell.github.io/FiddleBops/"; // Set the source
+             playButton.style.display = "none"; //Hide button
+            iframeLoaded = true; // Set to true so it's not loaded again
+            iframe.focus(); // Give focus to iframe for keyboard controls if necessary
+        }
+          playButton.addEventListener("click", loadIframe); // Listen for click
+    </script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">FiddleBops</div>
-            <button class="nav-toggle">
+<nav>
+            <div class = "nav-top">
+                <div class="logo"><a href="/">FiddleBops</a></div>
+               <button class="nav-toggle">
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
             </button>
+
+            </div>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
-                <li><a href="/#play">FiddleBops Game</a></li>
                 <li><a href="/#descrip">FiddleBops Gameplay</a></li>
+                <li><a href="/#faq">FAQ</a></li>
             </ul>
-			<select style="float:right;">
-				<option value="">Language</option>
-				<option data-url="/">English</option>
-				<option data-url="/zh">简体中文</option>  
-				<option data-url="/es">Español</option>
-				<option data-url="/fr">Français</option>
-				<option data-url="/de">Deutsch</option>
-				<option data-url="/ja">日本語</option>
-				<option data-url="/ko">한국어</option>
-			  </select>
+
         </nav>
     </header>
    <main>
-        <section class="hero">
+        <section class="hero more-games">
             <h1>Free Online FiddleBops Game</h1>
             <p>Embark on an amazing musical journey, unleash your talent, and create unique musical rhythms...</p>
-            <button><a href="#play">Start Game</a></button>
-        </section>
-        <section class="more-games" id="play">
-            <h2>FiddleBops: A Captivating Music Creation Game</h2>
              <div class="game-grid">
                  <!-- Game cards go here -->
-                 <div class="game-card">
-                  <iframe 
-                  src="https://silkycell.github.io/FiddleBops/" 
-                  width="100%" 
-                  height="600px" 
-                  loading="lazy" 
-                  fetchpriority="high" title="FiddleBops Game">
-                  </iframe>
+                 <div class="game-card responsive-iframe-container">
+                    <iframe id="fiddlebops-iframe" src="" allowfullscreen width="100%" height="100%"></iframe>
+                        <button id="playButton">▶️ Play</button>
+                    </div>
                    </div>
              </div>
         </section>
@@ -135,7 +104,7 @@ import "../styles/style.css";
                  </div>
                  <div class="step">
                    <h3>Step Three</h3>
-                   <h4>Creation Complete</h4>
+                    <h4>Creation Complete</h4>
                     <p>Some FiddleBops will allow you to save or share your work</p>
                  </div>
             </div>
@@ -172,7 +141,7 @@ import "../styles/style.css";
                   </div>
             </div>
        </section>
-       <section class="faq">
+       <section class="faq" id="faq">
              <h2>FiddleBops Frequently Asked Questions</h2>
            <p>Below are some frequently asked questions (FAQs) about the FiddleBops game, these are compiled from general user experiences and online feedback.</p>
              <div class="faq-list">
@@ -210,29 +179,18 @@ import "../styles/style.css";
            </p>
          </div>
          <div class="footer-links">
-           <div class="sitemap">
-            <h3>Site Navigation</h3>
-             <ul>
-                <li><a href="/">Home</a></li>
-                 <li><a href="/#play">Start Game</a></li>
-                <li><a href="/#descrip">Gameplay Features</a></li>
-                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="/">Game Blog</a></li>
-            </ul>
-         </div>
          <div class="legal">
            <h3>Legal</h3>
             <ul>
-                <li><a href="#">Player Support</a></li>
-                 <li><a href="#">Privacy Policy</a></li>
-                 <li><a href="#">Customer Service</a></li>
+                 <li><a href="/privacy" rel="nofollow">Privacy Policy</a></li>
+                  <li><a href="/terms-of-service" rel="nofollow">Terms of service</a></li>
             </ul>
         </div>
          <div class="language">
            <h3>Language</h3>
-           <ul>
+            <ul>
                 <li><a href="/">English</a></li>
-                 <li><a href="/zh">Chinese</a></li>
+                 <li><a href="/zh">中文</a></li>
                   <li><a href="/fr">Français</a></li>
                  <li><a href="/es">Español</a></li>
                  <li><a href="/de">Deutsch</a></li>
@@ -244,5 +202,49 @@ import "../styles/style.css";
       </section>
      <p class="copyright">© 2025 FiddleBops All rights reserved.</p>
     </footer>
+  <script>
+        let iframeLoaded = false; // Track if iframe is loaded
+        const iframe = document.getElementById("fiddlebops-iframe"); // Moved outside loadIframe to be accessible
+        const playButton = document.getElementById("playButton");
+
+        function loadIframe() {
+            iframe.src = "https://silkycell.github.io/FiddleBops/"; // Set the source
+             playButton.style.display = "none"; //Hide button
+            iframeLoaded = true; // Set to true so it's not loaded again
+            iframe.focus(); // Give focus to iframe for keyboard controls if necessary
+        }
+          playButton.addEventListener("click", loadIframe); // Listen for click
+    </script>
+<style>
+/* Hide AddToAny vertical share bar when screen is less than 981 pixels wide */
+@media screen and (max-width: 980px) {
+    .a2a_floating_style.a2a_vertical_style { display: none; }
+}
+@media screen and (min-width: 980px) {
+    .a2a_floating_style.a2a_default_style { display: none; }
+}
+</style>
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_default_style" data-a2a-scroll-show="0,60" style="bottom:0px; right:0px;">
+
+<a class="a2a_button_x"></a>
+<a class="a2a_button_reddit"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_telegram"></a>
+<a class="a2a_button_whatsapp"></a>
+<a class="a2a_button_linkedin"></a>
+    <a class="a2a_dd" href="https://www.playfiddlebops.com/share"></a>
+</div>
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="left:0px; top:150px;">
+<a class="a2a_button_x"></a>
+<a class="a2a_button_reddit"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_telegram"></a>
+<a class="a2a_button_whatsapp"></a>
+<a class="a2a_button_linkedin"></a>
+    <a class="a2a_dd" href="https://www.playfiddlebops.com/share"></a>
+</div>
+
+<script defer src="https://static.addtoany.com/menu/page.js"></script>
 </body>
 </html>

@@ -7,18 +7,24 @@ import "../../styles/style.css";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FiddleBops - Crea Música Gratis en Línea</title>
+    <title>FiddleBops Incredibox - Crea Música Gratis en Línea</title>
      <meta name="description" content="Experimenta la alegría de crear música con FiddleBops, un juego en línea gratuito donde puedes componer ritmos musicales únicos.">
-    <meta name="keywords" content="FiddleBops, juego de música, juego gratis, crear música, juego de ritmo, juego para niños">
-    <meta name="author" content="Equipo FiddleBops">
-    <meta property="og:title" content="FiddleBops - Juego de Música en Línea Gratuito">
+    <meta name="keywords" content="FiddleBops, juego de música, juego gratis, crear música, juego de ritmo">
+    <meta property="og:title" content="FiddleBops Incredibox - Juego de Música en Línea Gratuito">
     <meta property="og:description" content="Experimenta la alegría de crear música con FiddleBops, un juego en línea gratuito donde puedes componer ritmos musicales únicos.">
-    <meta property="og:image" content="URL_de_la_Imagen_del_Juego">
-    <meta property="og:url" content="URL_del_Sitio_Web">
-    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.playfiddlebops.com/es"/>
+    <meta property="og:site_name" content="FiddleBops Incredibox"/>
+    <meta property="og:image" content="https://www.playfiddlebops.com/img-t.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="https://www.playfiddlebops.com"/>
+    <meta name="twitter:creator" content="FiddleBops Incredibox"/>
+    <meta name="twitter:title" content="FiddleBops Incredibox - Free Online Music Creation Game"/>
+    <meta name="twitter:description" content="Experience the joy of making music with FiddleBops, a free online game where you can create unique musical rhythms."/>
+    <meta name="twitter:image" content="https://www.playfiddlebops.com/img-t.jpg"/>
     <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-     <link rel="canonical" href="URL_del_Sitio_Web" />
+    <link rel="icon" href="https://www.playfiddlebops.com/favicon.ico"/>
+     <link rel="canonical" href="https://www.playfiddlebops.com/es" />
      <link rel="preload" href="https://silkycell.github.io/FiddleBops/" as="document">
      <link rel="dns-prefetch" href="https://silkycell.github.io">
      <link rel="preconnect" href="https://silkycell.github.io" crossorigin>
@@ -32,88 +38,37 @@ import "../../styles/style.css";
     });
 });
   </script>
-  <script>
-	function goToLink(event) {
-	  const select = event.target;
-	  const selectedOption = select.options[select.selectedIndex];
-	  const url = selectedOption.getAttribute('data-url');
-	  if (url) {
-		window.location.href = url;
-	  }
-	}
-  
-	// 添加事件监听器
-	document.addEventListener('DOMContentLoaded', () => {
-	  const select = document.querySelector('select');
-	  if (select) {
-		select.addEventListener('change', goToLink);
-		
-		// 设置当前语言
-		const currentPath = window.location.pathname;
-		const options = Array.from(select.options);
-		const currentOption = options.find(option => 
-		  option.getAttribute('data-url') === currentPath
-		);
-		
-		if (currentOption) {
-		  currentOption.selected = true;
-		} else {
-		  // 如果是根路径或找不到匹配的选项，选择英文（默认语言）
-		  const defaultOption = options.find(option => 
-			option.getAttribute('data-url') === '/'
-		  );
-		  if (defaultOption) {
-			defaultOption.selected = true;
-		  }
-		}
-	  }
-	});
-  </script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">FiddleBops</div>
-            <button class="nav-toggle">
+<nav>
+            <div class = "nav-top">
+                <div class="logo"><a href="/es">FiddleBops</a></div>
+               <button class="nav-toggle">
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
             </button>
+
+            </div>
             <ul class="nav-links">
                 <li><a href="/es">Inicio</a></li>
-                <li><a href="/es#play">Juego FiddleBops</a></li>
                 <li><a href="/es#descrip">Cómo jugar FiddleBops</a></li>
+                <li><a href="/es#faq">Preguntas Frecuentes</a></li>
             </ul>
-			<select style="float:right;">
-				<option value="">Idioma</option>
-				<option data-url="/">English</option>
-				<option data-url="/zh">简体中文</option>  
-				<option data-url="/es">Español</option>
-				<option data-url="/fr">Français</option>
-				<option data-url="/de">Deutsch</option>
-				<option data-url="/ja">日本語</option>
-				<option data-url="/ko">한국어</option>
-			  </select>
+
         </nav>
     </header>
    <main>
-        <section class="hero">
+        <section class="hero more-games">
             <h1>Juego de FiddleBops en línea gratuito</h1>
             <p>Embárcate en un viaje musical asombroso, libera tu talento y crea ritmos musicales únicos...</p>
-            <button><a href="#play">Comenzar el juego</a></button>
-        </section>
-        <section class="more-games" id="play">
-            <h2>FiddleBops: Un juego de creación musical emocionante</h2>
              <div class="game-grid">
                  <!-- Game cards go here -->
-                 <div class="game-card">
-                  <iframe 
-                  src="https://silkycell.github.io/FiddleBops/" 
-                  width="100%" 
-                  height="600px" 
-                  loading="lazy" 
-                  fetchpriority="high">
-                  </iframe>
+                 <div class="game-card responsive-iframe-container">
+                    <iframe id="fiddlebops-iframe" src="" allowfullscreen width="100%" height="100%"></iframe>
+                        <button id="playButton">▶️ Play</button>
+                    </div>
                    </div>
              </div>
         </section>
@@ -171,7 +126,7 @@ import "../../styles/style.css";
                   </div>
             </div>
        </section>
-       <section class="faq">
+       <section class="faq" id="faq">
             <h2>Preguntas frecuentes sobre FiddleBops</h2>
            <p>A continuación, se presentan algunas preguntas frecuentes (FAQ) sobre el juego FiddleBops. Esta información se recopila a partir de experiencias generales de los usuarios y comentarios en línea.</p>
              <div class="faq-list">
@@ -209,22 +164,11 @@ import "../../styles/style.css";
            </p>
          </div>
          <div class="footer-links">
-           <div class="sitemap">
-            <h3>Navegación del sitio</h3>
-            <ul>
-                 <li><a href="/es">Inicio</a></li>
-                <li><a href="/es#play">Comenzar el juego</a></li>
-                <li><a href="/es#descrip">Características del juego</a></li>
-                <li><a href="#faq">Preguntas frecuentes</a></li>
-                <li><a href="/es">Blog del juego</a></li>
-            </ul>
-         </div>
           <div class="legal">
              <h3>Legal</h3>
             <ul>
-                 <li><a href="#">Soporte al jugador</a></li>
-                 <li><a href="#">Política de privacidad</a></li>
-                  <li><a href="#">Servicio al cliente</a></li>
+                 <li><a href="/es/privacy" rel="nofollow">Política de privacidad</a></li>
+                  <li><a href="/es/terms-of-service" rel="nofollow">Términos de Servicio</a></li>
             </ul>
           </div>
            <div class="language">
@@ -243,5 +187,52 @@ import "../../styles/style.css";
        </section>
      <p class="copyright">© 2025 FiddleBops Todos los derechos reservados.</p>
     </footer>
+    <script>
+      function goToLink(event) {
+        const select = event.target;
+        const selectedOption = select.options[select.selectedIndex];
+        const url = selectedOption.getAttribute('data-url');
+        if (url) {
+          window.location.href = url;
+        }
+      }
+  
+      // Add event listener
+      document.addEventListener('DOMContentLoaded', () => {
+        const select = document.querySelector('select');
+        if (select) {
+          select.addEventListener('change', goToLink);
+  
+          // Set current language based on the <html> tag's lang attribute
+          const htmlLang = document.documentElement.lang;
+          const options = Array.from(select.options);
+  
+          // Try to find an option that exactly matches the lang attribute
+          const currentOption = options.find(option =>
+            option.getAttribute('data-lang') === htmlLang
+          );
+  
+          if (currentOption) {
+            currentOption.selected = true;
+          } else {
+            // If no exact match is found, try to find a default option (data-lang="en" or "/")
+            let defaultOption = options.find(option =>
+              option.getAttribute('data-lang') === 'en' // common default
+            );
+  
+            if (!defaultOption) {
+              defaultOption = options.find(option =>
+                option.getAttribute('data-lang') === '/' // older convention
+              );
+            }
+  
+  
+            if (defaultOption) {
+              defaultOption.selected = true;
+            }
+          }
+        }
+      });
+      </script>
 </body>
 </html>
