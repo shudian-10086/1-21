@@ -580,8 +580,10 @@ footer {
        nav select{
             order:3;
         }
-
-
+}
+@media (max-width: 640px) {
+.step{width:100%!important;
+flex:inherit}
 }
 .nav select{
         float:right;
